@@ -3,98 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soham Ghosh | Portfolio</title>
+  <title>Namish Parasher — Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav id="navbar">
-    <div class="nav-inner">
-      <a class="nav-logo" href="#hero">SG</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <ul class="mobile-menu" id="mobile-menu">
+    <div class="nav-logo">NP</div>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-      <div class="glow glow-1"></div>
-      <div class="glow glow-2"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-tag reveal">Electrical & Computer Engineering</div>
-      <h1 class="hero-name reveal delay-1">Soham<br /><span class="accent">Ghosh</span></h1>
-      <p class="hero-sub reveal delay-2">
-        Engineering student, bilingual communicator & emerging tech enthusiast<br />
-        based in Edison, NJ.
-      </p>
-      <div class="hero-cta reveal delay-3">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="#experience" class="btn btn-ghost">View Work</a>
+    <div class="hero-grain"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-tag">Finance Student · Brand Builder · Operator</p>
+        <h1 class="hero-name">Namish<br /><em>Parasher</em></h1>
+        <p class="hero-sub">Rutgers Business School, Finance '29 · Edison, NJ</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Get in Touch</a>
+          <a href="#experience" class="btn-ghost">View Work</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="photo-ring"></div>
+        <img src="Headimage.jpg" alt="Namish Parasher" class="hero-photo" />
       </div>
     </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
+    <div class="scroll-hint">
+      <span>scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="container">
-      <div class="section-label reveal">01 — About</div>
+    <div class="section-inner">
+      <div class="section-label">01 — About</div>
       <div class="about-grid">
-        <div class="about-photo-wrap reveal">
-          <div class="photo-placeholder">
-            <!-- Replace src with your actual photo filename, e.g. src="photo.jpg" -->
-            <img id="profile-img" src="IMG_5724.PNG" alt="Soham Ghosh" onerror="this.style.display='none'" />
-            <div class="photo-initials" style="display:none">SG</div>
-          </div>
-          <div class="about-badge">Rutgers '29</div>
+        <div class="about-heading">
+          <h2>A driven student <em>building real-world experience</em> while earning his degree.</h2>
         </div>
-        <div class="about-text reveal delay-1">
-          <h2>Building things that <span class="accent">matter</span>.</h2>
+        <div class="about-body">
           <p>
-            I'm Soham Ghosh, an Electrical and Computer Engineering student at Rutgers University,
-            Newark — on track to graduate in 2029. My coursework spans computer science, robotics,
-            and calculus, giving me a solid foundation across both software and hardware domains.
+            I'm Namish — a Finance major at Rutgers Business School with a background that spans customer operations, brand marketing, and team leadership. I graduated summa cum laude from John P. Stevens High School and served as Club President during my senior years.
           </p>
           <p>
-            Beyond academics, I've gained hands-on experience in logistics and brand promotion,
-            and served as an IT intern during high school. I thrive at the intersection of
-            technology and people — whether I'm troubleshooting systems or representing a brand.
+            Whether I'm training new hires at Amazon, writing performance reports for a retail brand, or representing an insurance company in the field, I bring structure, communication, and care to everything I do.
           </p>
           <div class="about-stats">
             <div class="stat">
-              <div class="stat-num">2</div>
-              <div class="stat-label">Languages</div>
+              <span class="stat-num">3.7+</span>
+              <span class="stat-label">HS GPA, Summa Cum Laude</span>
             </div>
             <div class="stat">
-              <div class="stat-num">3+</div>
-              <div class="stat-label">Years Experience</div>
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Professional Roles</span>
             </div>
             <div class="stat">
-              <div class="stat-num">90%</div>
-              <div class="stat-label">Satisfaction Rating</div>
+              <span class="stat-num">'29</span>
+              <span class="stat-label">Rutgers B-School Grad</span>
             </div>
           </div>
         </div>
@@ -104,143 +85,166 @@
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="container">
-      <div class="section-label reveal">02 — Experience</div>
-      <h2 class="section-title reveal">Where I've Worked</h2>
-      <div class="timeline">
+    <div class="section-inner">
+      <div class="section-label">02 — Experience</div>
+      <h2 class="section-title">Where I've <em>worked</em></h2>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <div class="timeline-role">Associate</div>
-                <div class="timeline-company">Amazon Warehouse — Avenel, NJ</div>
-              </div>
-              <div class="timeline-date">Dec 2025 – Present</div>
+      <div class="exp-list">
+
+        <div class="exp-item" data-index="01">
+          <div class="exp-meta">
+            <span class="exp-period">Dec 2025 – Present</span>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Amazon Warehouse</h3>
+              <span class="exp-role">Associate · Avenel, NJ</span>
             </div>
-            <ul class="timeline-bullets">
-              <li>Maintained a clean, orderly environment and earned a <strong>90% employee satisfaction rating</strong>.</li>
-              <li>Proficiently managed order picking, fulfillment, inventory, and asset tracking processes.</li>
+            <ul class="exp-bullets">
+              <li>Trained 5 new employees in customer service script recitation, conflict resolution, and data entry</li>
+              <li>Maintained a clean environment and upheld sanitary standards</li>
+              <li>Handled packaging and shipment of thousands of Amazon Fresh delivery orders</li>
             </ul>
           </div>
         </div>
 
-        <div class="timeline-item reveal delay-1">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <div class="timeline-role">Brand Representative</div>
-                <div class="timeline-company">Positive Impact — New Jersey</div>
-              </div>
-              <div class="timeline-date">Oct 2024 – Jun 2025</div>
+        <div class="exp-item" data-index="02">
+          <div class="exp-meta">
+            <span class="exp-period">Nov 2024 – Dec 2025</span>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>The Slime Factory</h3>
+              <span class="exp-role">Event & Experience Associate · Edison, NJ</span>
             </div>
-            <ul class="timeline-bullets">
-              <li>Developed deep knowledge of product offerings, elevating merchandise enjoyment for customers.</li>
-              <li>Promoted partner brands and expanded their outreach through strategic merchandising.</li>
+            <ul class="exp-bullets">
+              <li>Delivered exceptional customer service in a fast-paced retail environment</li>
+              <li>Wrote and maintained a monthly sales report with daily updates and performance feedback</li>
+              <li>Trained staff on products, services, and customer appreciation standards</li>
             </ul>
           </div>
         </div>
 
-        <div class="timeline-item reveal delay-2">
-          <div class="timeline-marker"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <div class="timeline-role">IT Department Intern</div>
-                <div class="timeline-company">John P. Stevens High School — Edison, NJ</div>
-              </div>
-              <div class="timeline-date">During High School</div>
+        <div class="exp-item" data-index="03">
+          <div class="exp-meta">
+            <span class="exp-period">Oct 2024 – Dec 2024</span>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Positive Impact</h3>
+              <span class="exp-role">Brand Representative · New Jersey</span>
             </div>
-            <ul class="timeline-bullets">
-              <li>Assisted the IT department with technical support, maintenance, and day-to-day operations.</li>
-              <li>Gained foundational experience in technology infrastructure and helpdesk support.</li>
+            <ul class="exp-bullets">
+              <li>Provided brand merchandise to drive sales growth and improve customer retention</li>
+              <li>Marketed new health insurance plans to prospective customers looking to upgrade</li>
             </ul>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="container">
-      <div class="section-label reveal">03 — Education</div>
-      <h2 class="section-title reveal">Academic Background</h2>
-      <div class="edu-grid">
-        <div class="edu-card reveal">
-          <div class="edu-icon">🎓</div>
-          <div class="edu-body">
-            <div class="edu-school">Rutgers, The State University of New Jersey</div>
-            <div class="edu-degree">B.S. Electrical & Computer Engineering</div>
-            <div class="edu-location">New Brunswick, NJ · Expected May 2029</div>
-            <p class="edu-note">Currently completing courses in Computer Science, Robotics, and Calculus.</p>
-          </div>
-        </div>
-        <div class="edu-card reveal delay-1">
-          <div class="edu-icon">📘</div>
-          <div class="edu-body">
-            <div class="edu-school">John P. Stevens High School</div>
-            <div class="edu-degree">High School Diploma</div>
-            <div class="edu-location">Edison, NJ · Graduated June 2025</div>
-            <p class="edu-note">AP Computer Science Principles · IT Department Intern</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="container">
-      <div class="section-label reveal">04 — Skills</div>
-      <h2 class="section-title reveal">What I Bring</h2>
+    <div class="section-inner">
+      <div class="section-label">03 — Skills</div>
+      <h2 class="section-title">What I <em>bring</em></h2>
       <div class="skills-grid">
-        <div class="skill-pill reveal"><span class="pill-icon">💬</span>Customer Service</div>
-        <div class="skill-pill reveal delay-1"><span class="pill-icon">⏱</span>Time Management</div>
-        <div class="skill-pill reveal delay-2"><span class="pill-icon">🌐</span>Bilingual</div>
-        <div class="skill-pill reveal delay-3"><span class="pill-icon">🤝</span>Leadership</div>
-        <div class="skill-pill reveal delay-1"><span class="pill-icon">🤖</span>Robotics</div>
-        <div class="skill-pill reveal delay-2"><span class="pill-icon">💻</span>Computer Science</div>
-        <div class="skill-pill reveal delay-3"><span class="pill-icon">📦</span>Inventory Management</div>
-        <div class="skill-pill reveal"><span class="pill-icon">🧮</span>Calculus</div>
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h4>Customer Service</h4>
+          <p>Proven ability to handle high-pressure situations, resolve conflicts, and create positive guest experiences.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h4>Microsoft Excel</h4>
+          <p>Comfortable building and maintaining reports, tracking performance data, and presenting findings clearly.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h4>Leadership</h4>
+          <p>Served as Club President and has trained multiple teams across different professional environments.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h4>Communication</h4>
+          <p>Fluent in English with strong written and verbal communication skills cultivated across retail, logistics, and marketing roles.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h4>Guest Services</h4>
+          <p>Experience managing guest-facing interactions in event settings, ensuring smooth and memorable experiences.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h4>Sales & Marketing</h4>
+          <p>Hands-on brand representation and direct marketing experience, including health insurance and consumer retail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-inner">
+      <div class="section-label">04 — Education</div>
+      <h2 class="section-title">Where I <em>learned</em></h2>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-year">2025 – 2029</div>
+          <div class="edu-details">
+            <h3>Rutgers, The State University of New Jersey – Newark</h3>
+            <p class="edu-sub">B.S. Finance · Rutgers Business School · Newark, NJ</p>
+            <p class="edu-note">Expected graduation May 2029</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year">Graduated 2025</div>
+          <div class="edu-details">
+            <h3>John P. Stevens High School</h3>
+            <p class="edu-sub">Edison, NJ · Summa Cum Laude · 3.7+ GPA</p>
+            <p class="edu-note">Club President, 2022–2023 academic year</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="container">
-      <div class="section-label reveal">05 — Contact</div>
-      <h2 class="section-title reveal">Let's Connect</h2>
-      <p class="contact-sub reveal delay-1">
-        I'm always open to new opportunities, collaborations, or just a good conversation.
-        Feel free to reach out!
-      </p>
-      <div class="contact-cards reveal delay-2">
-        <a class="contact-card" href="/cdn-cgi/l/email-protection#422573312d2a232f02252f232b2e6c212d2f">
-          <div class="contact-card-icon">✉️</div>
-          <div class="contact-card-label">Email</div>
-          <div class="contact-card-value"><span class="__cf_email__" data-cfemail="36510745595e575b76515b575f5a1855595b">[email&#160;protected]</span></div>
+    <div class="section-inner contact-inner">
+      <div class="section-label">05 — Contact</div>
+      <h2 class="contact-title">Let's <em>connect</em></h2>
+      <p class="contact-sub">Open to internships, part-time roles, and professional conversations.</p>
+      <div class="contact-links">
+        <a href="mailto:namishparasher1@gmail.com" class="contact-link">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-val">namishparasher1@gmail.com</span>
+          <span class="contact-arrow">↗</span>
         </a>
-        <a class="contact-card" href="tel:2017531269">
-          <div class="contact-card-icon">📱</div>
-          <div class="contact-card-label">Phone</div>
-          <div class="contact-card-value">(201) 753-1269</div>
+        <a href="tel:2678449188" class="contact-link">
+          <span class="contact-link-label">Phone</span>
+          <span class="contact-link-val">(267) 844-9188</span>
+          <span class="contact-arrow">↗</span>
         </a>
-        <div class="contact-card">
-          <div class="contact-card-icon">📍</div>
-          <div class="contact-card-label">Location</div>
-          <div class="contact-card-value">Edison, NJ</div>
-        </div>
+        <a href="https://linkedin.com" target="_blank" class="contact-link">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-val">Connect on LinkedIn</span>
+          <span class="contact-arrow">↗</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container footer-inner">
-      <span class="footer-logo">SG</span>
-      <span class="footer-c
+    <div class="footer-inner">
+      <span class="footer-name">Namish Parasher</span>
+      <span class="footer-copy">© 2025 · Built with intention</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

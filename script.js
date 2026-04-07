@@ -1,57 +1,88 @@
-/* ============================================================
-   Soham Ghosh Portfolio — script.js
-   ============================================================ */
+// ============================================
+//  NAMISH PARASHER — PORTFOLIO SCRIPT
+// ============================================
 
-// ---- SCROLL REVEAL ----
-function activateReveals() {
-  const revealEls = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
-    );
-    revealEls.forEach((el) => observer.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add('visible'));
-  }
-
-  // Safety net: after 800ms make anything still hidden visible
-  setTimeout(() => {
-    revealEls.forEach((el) => el.classList.add('visible'));
-  }, 800);
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', activateReveals);
-} else {
-  activateReveals();
-}
-
-// ---- NAVBAR ----
-window.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (!navbar) return;
-  navbar.style.background = window.scrollY > 40
-    ? 'rgba(255,255,255,0.98)'
-    : 'rgba(255,255,255,0.92)';
-});
-
-// ---- MOBILE MENU ----
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+  // ── Navbar scroll shrink ──────────────────
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // ── Mobile nav toggle ─────────────────────
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile nav on link click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
     });
-  }
+  });
+
+  // ── Scroll reveal ─────────────────────────
+  const revealEls = document.querySelectorAll(
+    '.exp-item, .skill-card, .edu-item, .about-grid, .contact-links, .section-title, .section-label'
+  );
+
+  revealEls.forEach(el => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger children in lists
+          const delay = entry.target.dataset.delay || 0;
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, delay);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  // Add stagger delays to grid/list children
+  document.querySelectorAll('.exp-item').forEach((el, i) => {
+    el.dataset.delay = i * 80;
+  });
+
+  document.querySelectorAll('.skill-card').forEach((el, i) => {
+    el.dataset.delay = i * 60;
+  });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Active nav link on scroll ─────────────
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-links a');
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(link => {
+            link.style.color = '';
+            if (link.getAttribute('href') === `#${entry.target.id}`) {
+              link.style.color = 'var(--lavender)';
+            }
+          });
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  sections.forEach(s => sectionObserver.observe(s));
+
 });
