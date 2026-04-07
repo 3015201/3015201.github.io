@@ -1,71 +1,57 @@
 /* ============================================================
    Soham Ghosh Portfolio — script.js
-   Features: scroll reveal, active nav highlight, mobile menu
    ============================================================ */
 
 // ---- SCROLL REVEAL ----
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-);
+function activateReveals() {
+  const revealEls = document.querySelectorAll('.reveal');
 
-document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
-
-// ---- NAVBAR SCROLL EFFECT ----
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.style.background = 'rgba(11,14,26,0.97)';
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
+    );
+    revealEls.forEach((el) => observer.observe(el));
   } else {
-    navbar.style.background = 'rgba(11,14,26,0.85)';
+    revealEls.forEach((el) => el.classList.add('visible'));
   }
+
+  // Safety net: after 800ms make anything still hidden visible
+  setTimeout(() => {
+    revealEls.forEach((el) => el.classList.add('visible'));
+  }, 800);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', activateReveals);
+} else {
+  activateReveals();
+}
+
+// ---- NAVBAR ----
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  navbar.style.background = window.scrollY > 40
+    ? 'rgba(255,255,255,0.98)'
+    : 'rgba(255,255,255,0.92)';
 });
 
 // ---- MOBILE MENU ----
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
-
-// Close mobile menu when a link is clicked
-mobileMenu.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-  });
-});
-
-// ---- ACTIVE NAV LINK HIGHLIGHT ----
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
-
-const activeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => link.style.color = '');
-        const activeLink = document.querySelector(
-          `.nav-links a[href="#${entry.target.id}"], .mobile-menu a[href="#${entry.target.id}"]`
-        );
-        if (activeLink) activeLink.style.color = 'var(--accent)';
-      }
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
-  },
-  { threshold: 0.4 }
-);
-
-sections.forEach((section) => activeObserver.observe(section));
-
-// ---- PHOTO HANDLING ----
-// When user adds their photo in the same folder, it will auto-load.
-// The img tag already has onerror to hide itself if missing.
-// You can change the src to your actual photo filename:
-// document.getElementById('profile-img').src = 'photo.jpg';
+  }
+});
