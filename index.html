@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soham Ghosh | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">SG</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag reveal">Electrical & Computer Engineering</div>
+      <h1 class="hero-name reveal delay-1">Soham<br /><span class="accent">Ghosh</span></h1>
+      <p class="hero-sub reveal delay-2">
+        Engineering student, bilingual communicator & emerging tech enthusiast<br />
+        based in Edison, NJ.
+      </p>
+      <div class="hero-cta reveal delay-3">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn btn-ghost">View Work</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label reveal">01 — About</div>
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal">
+          <div class="photo-placeholder">
+            <!-- Replace src with your actual photo filename, e.g. src="photo.jpg" -->
+            <img id="profile-img" src="" alt="Soham Ghosh" onerror="this.style.display='none'" />
+            <div class="photo-initials">SG</div>
+          </div>
+          <div class="about-badge">Rutgers '29</div>
+        </div>
+        <div class="about-text reveal delay-1">
+          <h2>Building things that <span class="accent">matter</span>.</h2>
+          <p>
+            I'm Soham Ghosh, an Electrical and Computer Engineering student at Rutgers University,
+            Newark — on track to graduate in 2029. My coursework spans computer science, robotics,
+            and calculus, giving me a solid foundation across both software and hardware domains.
+          </p>
+          <p>
+            Beyond academics, I've gained hands-on experience in logistics and brand promotion,
+            and served as an IT intern during high school. I thrive at the intersection of
+            technology and people — whether I'm troubleshooting systems or representing a brand.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-num">2</div>
+              <div class="stat-label">Languages</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">90%</div>
+              <div class="stat-label">Satisfaction Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label reveal">02 — Experience</div>
+      <h2 class="section-title reveal">Where I've Worked</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Associate</div>
+                <div class="timeline-company">Amazon Warehouse — Avenel, NJ</div>
+              </div>
+              <div class="timeline-date">Dec 2025 – Present</div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Maintained a clean, orderly environment and earned a <strong>90% employee satisfaction rating</strong>.</li>
+              <li>Proficiently managed order picking, fulfillment, inventory, and asset tracking processes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Brand Representative</div>
+                <div class="timeline-company">Positive Impact — New Jersey</div>
+              </div>
+              <div class="timeline-date">Oct 2024 – Jun 2025</div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed deep knowledge of product offerings, elevating merchandise enjoyment for customers.</li>
+              <li>Promoted partner brands and expanded their outreach through strategic merchandising.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">IT Department Intern</div>
+                <div class="timeline-company">John P. Stevens High School — Edison, NJ</div>
+              </div>
+              <div class="timeline-date">During High School</div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Assisted the IT department with technical support, maintenance, and day-to-day operations.</li>
+              <li>Gained foundational experience in technology infrastructure and helpdesk support.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label reveal">03 — Education</div>
+      <h2 class="section-title reveal">Academic Background</h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <div class="edu-school">Rutgers, The State University of New Jersey</div>
+            <div class="edu-degree">B.S. Electrical & Computer Engineering</div>
+            <div class="edu-location">New Brunswick, NJ · Expected May 2029</div>
+            <p class="edu-note">Currently completing courses in Computer Science, Robotics, and Calculus.</p>
+          </div>
+        </div>
+        <div class="edu-card reveal delay-1">
+          <div class="edu-icon">📘</div>
+          <div class="edu-body">
+            <div class="edu-school">John P. Stevens High School</div>
+            <div class="edu-degree">High School Diploma</div>
+            <div class="edu-location">Edison, NJ · Graduated June 2025</div>
+            <p class="edu-note">AP Computer Science Principles · IT Department Intern</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label reveal">04 — Skills</div>
+      <h2 class="section-title reveal">What I Bring</h2>
+      <div class="skills-grid">
+        <div class="skill-pill reveal"><span class="pill-icon">💬</span>Customer Service</div>
+        <div class="skill-pill reveal delay-1"><span class="pill-icon">⏱</span>Time Management</div>
+        <div class="skill-pill reveal delay-2"><span class="pill-icon">🌐</span>Bilingual</div>
+        <div class="skill-pill reveal delay-3"><span class="pill-icon">🤝</span>Leadership</div>
+        <div class="skill-pill reveal delay-1"><span class="pill-icon">🤖</span>Robotics</div>
+        <div class="skill-pill reveal delay-2"><span class="pill-icon">💻</span>Computer Science</div>
+        <div class="skill-pill reveal delay-3"><span class="pill-icon">📦</span>Inventory Management</div>
+        <div class="skill-pill reveal"><span class="pill-icon">🧮</span>Calculus</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label reveal">05 — Contact</div>
+      <h2 class="section-title reveal">Let's Connect</h2>
+      <p class="contact-sub reveal delay-1">
+        I'm always open to new opportunities, collaborations, or just a good conversation.
+        Feel free to reach out!
+      </p>
+      <div class="contact-cards reveal delay-2">
+        <a class="contact-card" href="mailto:g1soham@gmail.com">
+          <div class="contact-card-icon">✉️</div>
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">g1soham@gmail.com</div>
+        </a>
+        <a class="contact-card" href="tel:2017531269">
+          <div class="contact-card-icon">📱</div>
+          <div class="contact-card-label">Phone</div>
+          <div class="contact-card-value">(201) 753-1269</div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-card-icon">📍</div>
+          <div class="contact-card-label">Location</div>
+          <div class="contact-card-value">Edison, NJ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo">SG</span>
+      <span class="footer-copy">© 2025 Soham Ghosh. Built with Claude AI.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
